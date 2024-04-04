@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+    <title>Product Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="nav-bar"></div>
+
+<div id="app" class="col-lg-10" style="margin: 0 auto;">
+    <div class="product">
+        <div class="product-image">
+            <img :src="image" />
+        </div>
+
+        <div class="product-info">
+            <h1>{{ title }}</h1>
+            <label>in stock</label>
+            <div class="onsale">
+                <span>{{inStock}}</span>
+                <span :style="sale.style">{{sale.text}}</span>
+            </div>
+            <label>details</label>
+            <ul class="details">
+                <li v-for="detail in details">{{ detail }}</li>
+            </ul>
+            <label>color (place cursor on)</label>
+            <div class="colors">
+                <span v-for="(variant, index) in variants"
+                      :key="variant.variantId"
+                      :style="{ backgroundColor:variant.variantColor }" @mouseover="updateProduct(index)"></span>
+            </div>
+            <label>size</label>
+            <div class="size">
+                <span v-for="size in sizes">{{size}}</span>
+            </div>
+            <button v-on:click="removeFromCart">- (cart)</button>
+            <button v-on:click="addToCart()" :disabled="newStock" :class="{ disabledButton: newStock}">+ (cart)</button>
+        </div>
+        <div class="cart">
+            Cart (<span style="color: red">{{ cart }}</span>)
+        </div>
+    </div>
+
+    <span>* adding to cart is not finalized (currently works as a simple counter)</span>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

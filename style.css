@@ -1,0 +1,128 @@
+body {
+    font-family: tahoma;
+    color: #282828;
+    margin: 0px;
+}
+
+.nav-bar {
+    background: #313948;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    width: auto;
+    margin: 20px auto;
+    height: 400px;
+    display: inherit;
+}
+
+.product-image {
+    flex-basis: 460px;
+}
+
+.product-info {
+    margin: 10px auto;
+    flex-basis: 400px;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.cart {
+    margin-top: 15px;
+    border: 1px solid #d8d8d8;
+    padding: 15px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    width: 90px;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+button {
+    margin-top: 30px;
+    border: none;
+    background-color: #1E95EA;
+    color: white;
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+}
+
+.disabledButton {
+    background-color: #d8d8d8;
+}
+
+.review-form {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #d8d8d8;
+}
+
+input {
+    width: 100%;
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+}
+.colors span{
+    width: 55px;
+    height: 20px;
+    margin: 5px;
+    display: inline-block;
+}
+.colors span:hover{
+    cursor: pointer;
+}
+.size span {
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid #678a67;
+    padding: 0px 5px;
+}
+.onsale span {
+    margin: 5px;
+    display: inline-block;
+    padding: 0px 5px;
+}
+.details {
+    padding: 0px 10px;
+}
+.details li {
+    list-style: none;
+}
+label {
+    font-size: 1.2rem;
+    color: #aca1a1;
+    border-top: 1px solid #e5eae8;
+    width: 100%;
+    margin: 0.5em 0px 0px;
+}
+.onsale {
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+}
+#app > span {
+    font-style: italic;
+    text-align: end;
+    color: rgb(65, 184, 131);
+    display: inline-flex;
+    width: 100%;
+    justify-content: end;
+    align-items: end;
+}
