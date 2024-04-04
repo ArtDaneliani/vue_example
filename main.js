@@ -31,7 +31,7 @@ var app = new Vue({
                 variantId: 2236,
                 variantColor: 'green',
                 variantQuantity: 0,
-                variantImage: "assets/green.jpg",
+                variantImage: "assets/green.JPG",
                 variantSize: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
                 onSale: false,
             }
